@@ -1,14 +1,20 @@
 <template>
   <div class="boxHero">
       <div class="header"></div>
-      <div class="principal">99,2 Kg</div>
+      <div class="principal">{{actualSize}} Kg</div>
       <div class="footer"></div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Hero'
+    name: 'Hero',
+     props: ["actual_size"],
+     data() {
+         return {
+             actualSize: this.actual_size ?? 0
+         }
+     }
 }
 </script>
 

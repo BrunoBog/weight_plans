@@ -1,12 +1,12 @@
 <template>
   <div class="content">
    <weightCard/>
-    <weightCard/>
+    <!--TODO: <GraphCard/> -->
   </div>
 </template>
 
 <script>
-import weightCard from '../components/Card.vue'
+import weightCard from '../components/WeightCard.vue'
 export default {
   name: "resume",
   components: {weightCard}
@@ -18,6 +18,6 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: -40px;
 }
 </style>
