@@ -1,7 +1,8 @@
 <template>
   <div class="content">
    <weightCard/>
-    <!--TODO: <GraphCard/> -->
+   <weightCard/>
+    <!-- <GraphCard/> -->
   </div>
 </template>
 

@@ -4,13 +4,13 @@
       <input class="form" type="text" name="field1" placeholder="Actual Wheight" />
       <DatePicker />
     </div>
-    <Butt class="but" v-on: On_click="On_click" label="Send" />
+    <Butt class="but" v-on: On_click="On_click" Label="Send" />
   </div>
 </template>
 
 <script>
 import Butt from "../components/button.vue";
-import DatePicker from "../components/datepicker";
+import DatePicker from "../components/datepicker.vue";
 export default {
   name: "weightCard",
   components: {

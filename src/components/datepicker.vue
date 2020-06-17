@@ -9,6 +9,7 @@
 
 <script>
 import VueTailwindPicker from "vue-tailwind-picker";
+import 'dayjs'
 export default {
   name: "DatePicker",
   components: {
@@ -18,9 +19,5 @@ export default {
 </script>
 
 <style scoped>
-    .picker{
-        display: subgrid !important;
-        width: 50px;
-        height: 50px;
-    }
+
 </style>
