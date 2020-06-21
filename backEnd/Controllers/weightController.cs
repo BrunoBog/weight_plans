@@ -9,7 +9,7 @@ namespace weight.Controllers
     {
         private readonly WeightService _service;
 
-        public Weight(WeightService weightService)
+        public WeightController(WeightService weightService)
         {
             _service = weightService;
         }
