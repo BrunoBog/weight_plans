@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 using backEnd.model.Settings;
 using backEnd.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 using weight.Database;
 
@@ -75,6 +67,11 @@ namespace weight
             var tokensecret = Configuration.GetSection("TokenSecret").Value;
             if (string.IsNullOrWhiteSpace(tokensecret)) throw new Exception("Cant find TokenSecret on settings.json");
             return Encoding.ASCII.GetBytes(tokensecret);
+            services.AddSingleton<WeightService>();
+            services.AddSingleton<UserService>();
+
+            services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -95,7 +92,6 @@ namespace weight
                .AllowAnyHeader());
 
             app.UseAuthentication();
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

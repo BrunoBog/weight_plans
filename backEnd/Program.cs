@@ -20,10 +20,7 @@ namespace weight
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>()
-                    // .UseUrls("http://*:5000")
-                    // .UseUrls("https://*:5001")
-                    ;
+                    webBuilder.UseStartup<Startup>();
                 });
     }
 }

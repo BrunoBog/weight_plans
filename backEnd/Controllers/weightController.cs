@@ -18,6 +18,7 @@ namespace weight.Controllers
 
         [HttpPost]
         [Authorize]
+
         public void SaveWeight(Weight weight)
         {
             _service.Create(weight);
@@ -34,6 +35,7 @@ namespace weight.Controllers
         [HttpGet]
         [Authorize]
         public List<Weight> GetAllFromUser() => User.Identity.Name == null ? _service.Get() : _service.GetFromUser(User.Identity.Name);
+
 
     }
 }

@@ -1,0 +1,5 @@
+E:\workspace\vue\weight_plans\backEnd\obj\Release\net5.0\linux-x64\weight.csprojAssemblyReference.cache
+E:\workspace\vue\weight_plans\backEnd\obj\Release\net5.0\linux-x64\weight.AssemblyInfoInputs.cache
+E:\workspace\vue\weight_plans\backEnd\obj\Release\net5.0\linux-x64\weight.AssemblyInfo.cs
+E:\workspace\vue\weight_plans\backEnd\obj\Release\net5.0\linux-x64\weight.csproj.CoreCompileInputs.cache
+E:\workspace\vue\weight_plans\backEnd\obj\Release\net5.0\linux-x64\weight.MvcApplicationPartsAssemblyInfo.cache
