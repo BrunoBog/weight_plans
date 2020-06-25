@@ -1,8 +1,8 @@
 <template>
   <div class="boxHero">
-      <div class="header"></div>
-      <div class="principal">{{actualSize}} Kg</div>
-      <div class="footer"></div>
+      <!-- <div class="header"></div> -->
+      <div>{{actualSize}} Kg</div>
+      <!-- <div class="footer"></div> -->
   </div>
 </template>
 
@@ -21,13 +21,15 @@ export default {
 <style>
     .boxHero{
         display: flex;
-        align-content: ba;
-        flex-direction: column;
+        align-items: center;
+          justify-content: center;
         color:#E96544;
-        /* background-image: image('../img/intro.jpg'); */
         background-image: linear-gradient(to right, #465775, #67AD86);
+        max-height: 450px;
     }
-    .principal{
+    .boxHero div{
         font-size: 99px;
+        width: 50%;
+        height: 30%;
     }
 </style>
