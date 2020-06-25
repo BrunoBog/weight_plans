@@ -1,16 +1,14 @@
 <template>
   <div class="card">
-    <div >
-      <input class="form" type="text" name="field1" placeholder="Actual Wheight" />
+      <input  type="text" name="field1" placeholder="Actual Wheight" />
       <DatePicker />
-    </div>
-    <Butt class="but" v-on: On_click="On_click" label="Send" />
+    <Butt class="but" v-on: On_click="On_click" Label="Send" />
   </div>
 </template>
 
 <script>
 import Butt from "../components/button.vue";
-import DatePicker from "../components/datepicker";
+import DatePicker from "../components/datepicker.vue";
 export default {
   name: "weightCard",
   components: {
@@ -35,7 +33,7 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #465775;
   max-width: 350px;
@@ -47,7 +45,13 @@ export default {
   max-width: 20px;
   max-height: 20px;
 }
-.form {
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card input {
   max-width: 200px;
   max-height: 30px;
   margin-top: 10px;

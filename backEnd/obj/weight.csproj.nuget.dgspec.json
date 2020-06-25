@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\workspace\\vue\\weight_plans\\backEnd\\weight.csproj": {}
+  },
+  "projects": {
+    "E:\\workspace\\vue\\weight_plans\\backEnd\\weight.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\workspace\\vue\\weight_plans\\backEnd\\weight.csproj",
+        "projectName": "weight",
+        "projectPath": "E:\\workspace\\vue\\weight_plans\\backEnd\\weight.csproj",
+        "packagesPath": "C:\\Users\\bruno.josafat\\.nuget\\packages\\",
+        "outputPath": "E:\\workspace\\vue\\weight_plans\\backEnd\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bruno.josafat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\bruno.josafat\\source\\repos\\tac\\Nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[5.0.0-preview.5.20279.2, 5.0.0-preview.5.20279.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[5.0.0-preview.5.20278.1, 5.0.0-preview.5.20278.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[5.0.0-preview.5.20278.1, 5.0.0-preview.5.20278.1]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.5.20279.10\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
