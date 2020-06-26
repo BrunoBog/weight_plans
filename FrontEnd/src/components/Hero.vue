@@ -25,7 +25,7 @@ export default {
         flex-direction: column;
         color:#E96544;
         /* background-image: image('../img/intro.jpg'); */
-        background-image: linear-gradient(to right, #465775, #67AD86);
+        background-image: linear-gradient(to right, #1D3557, #457B9D, #E63946);
     }
     .principal{
         font-size: 99px;

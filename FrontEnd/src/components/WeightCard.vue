@@ -35,7 +35,7 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #465775;
+  background-color: #F1FAEE;
   max-width: 350px;
   max-height: 170px;
   border: none;
@@ -52,14 +52,15 @@ export default {
   align-items: center;
 }
 .card input {
+  text-align: center;
   max-width: 200px;
   max-height: 30px;
   margin-top: 10px;
 
   /* color: #06d6a0; */
-  color: #ddd;
+  color: #1D3557;
   border: none;
-  border-bottom: 1px solid #048a81;
+  border-bottom: 1px solid #1D3557;
   background: transparent;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 14px;

@@ -10,7 +10,7 @@
 import weightCard from '../components/WeightCard.vue'
 export default {
   name: "resume",
-  components: {weightCard}
+  components: {weightCard,}
 };
 </script>
 
@@ -21,4 +21,4 @@ export default {
   justify-content: space-around;
   margin-top: -40px;
 }
-</style>
+</style>co
