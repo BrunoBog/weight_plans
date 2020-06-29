@@ -8,9 +8,6 @@
 
 <script>
 import weightCard from '../components/WeightCard.vue'
-import LineChart from '../components/LineChart.vue'
-// import axios from "axios";
-
 export default {
   name: "resume",
   components: {weightCard, LineChart}
@@ -26,4 +23,4 @@ export default {
   margin-left: 10px;
   
 }
-</style>
+</style>co

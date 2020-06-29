@@ -33,10 +33,10 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   height: 60px;
-  width: 70px;
+  width: 59px;
   opacity: 1;
-  background-color: #54C6EB;
-  border: 1px solid rgba(22, 76, 167, 0.6);
+  background-color: #A8DADC;
+  border: 1px solid #A8DADC; 
 }
 
 button span {
@@ -105,7 +105,7 @@ button:hover span {
   height: 50px;
   align-items: center;
   justify-content: center;
-  color: #ddd;
+  color: #1D3557;
   font-weight: bold;
 }
 </style>
