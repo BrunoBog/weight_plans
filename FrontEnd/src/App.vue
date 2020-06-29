@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <Hero />
+    <Hero class="hero" />
     <resume />
   </div>
 </template>
@@ -32,5 +32,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #e5e5e5;
+}
+.hero {
+  height: 50%;
 }
 </style>
