@@ -1,6 +1,6 @@
 <template>
   <div class="picker">
-      <datepicker placeholder="Select Date" language="ptBR"  class="dp"  input-class="inputs" v-model="vmodelexample" calendar-class="inputs" />
+      <datepicker placeholder="Select Date" language="ptBR"  class="dp"  input-class="inputs" :v-model="vmodelexample" calendar-class="inputs" />
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      vModelExample: null,
+      vModelExample: new Date(),
     }
   }
 };
@@ -33,6 +33,7 @@ export default {
   font-size: 14px;
   color: #1d3557;
   text-align:center;
+  padding: 0;
 }
 
 .inputs ::placeholder {

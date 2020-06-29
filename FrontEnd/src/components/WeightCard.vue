@@ -38,11 +38,12 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #f1faee;
-  max-width: 350px;
-  max-height: 200px;
+  background-color: #F1FAEE;
+  width: 350px;
+  height: 200px;
   border: none;
   border-radius: 25px;
+  padding: 10px;
 }
 .card input {
   text-align: center;

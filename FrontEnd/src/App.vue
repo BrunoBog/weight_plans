@@ -23,17 +23,20 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+body{
   width: 100%;
-  height: 100%;
+  max-height: 100%;
+  background-color: #F1FAEE;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #e5e5e5;
+  background-color: #F1FAEE;
 }
 .hero {
-  height: 50%;
+  min-height: 50%;
 }
 </style>

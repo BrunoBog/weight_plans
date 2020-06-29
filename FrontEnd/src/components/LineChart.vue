@@ -17,7 +17,7 @@ export default {
     return {
           series: [{
             name: 'Likes',
-            data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
+            data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5], 
           }],
           chartOptions: {
             chart: {
@@ -77,5 +77,8 @@ export default {
 .chart{
   margin-left: 30px;
   margin-right: 30px;
+  display: flex;
+  background-color: #F1FAEE;
+  border-radius: 25px;
 }
 </style>
