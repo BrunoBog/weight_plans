@@ -2,6 +2,7 @@
   <div class="boxHero">
       <div class="header"></div>
       <div class="principal">{{actualSize}} Kg</div>
+      <div class="sub">{{actualSize}}% Bf</div>
       <div class="footer"></div>
   </div>
 </template>
@@ -9,10 +10,11 @@
 <script>
 export default {
     name: 'Hero',
-     props: ["actual_size"],
+     props: ["actual_size", "actual_bf"],
      data() {
          return {
-             actualSize: this.actual_size ?? 0
+             actualSize: this.actual_size ?? 0,
+             actualBF: this.actual_bf ?? 0
          }
      }
 }
@@ -29,5 +31,8 @@ export default {
     }
     .principal{
         font-size: 99px;
+    }
+    .sub{
+        font-size: 30px;
     }
 </style>

@@ -10,10 +10,14 @@
   "dependencies": {
     "@hokify/vuejs-datepicker": "^2.0.2",
     "core-js": "^3.6.5",
+    "date-fns": "1.5",
     "dayjs": "^1.8.28",
+    "install": "^0.13.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
-    "vue-tailwind-picker": "^1.1.2"
+    "vue-airbnb-style-datepicker": "^2.7.1",
+    "vue2-datepicker": "^3.6.0",
+    "vuejs-datepicker": "^1.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

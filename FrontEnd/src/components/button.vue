@@ -33,7 +33,7 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   height: 60px;
-  width: 70px;
+  width: 59px;
   opacity: 1;
   background-color: #A8DADC;
   border: 1px solid #A8DADC; 
