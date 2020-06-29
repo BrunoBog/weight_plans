@@ -40,7 +40,7 @@ export default {
   align-items: center;
   background-color: #f1faee;
   max-width: 350px;
-  max-height: 170px;
+  max-height: 200px;
   border: none;
   border-radius: 25px;
 }
@@ -63,7 +63,7 @@ export default {
   max-width: 150px;
 }
 .picker {
-    margin: 2px;
+    margin: 5px;
     max-width: 100px;
     max-height: 25px;
     text-align: center;

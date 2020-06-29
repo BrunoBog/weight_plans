@@ -1,7 +1,7 @@
 <template>
   <div class="content">
    <weightCard/>
-   <weightCard/>
+   <!-- <weightCard/> -->
     <!-- <GraphCard/> -->
   </div>
 </template>
