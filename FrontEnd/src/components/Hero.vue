@@ -23,14 +23,16 @@ export default {
 <style>
     .boxHero{
         display: flex;
-        align-content: ba;
-        flex-direction: column;
+        align-items: center;
+          justify-content: center;
         color:#E96544;
         /* background-image: image('../img/intro.jpg'); */
         background-image: linear-gradient(to right, #1D3557, #457B9D, #E63946);
     }
-    .principal{
+    .boxHero div{
         font-size: 99px;
+        width: 50%;
+        height: 30%;
     }
     .sub{
         font-size: 30px;

@@ -1,7 +1,7 @@
 <template>
   <div class="content">
    <weightCard/>
-   <!-- <weightCard/> -->
+   <LineChart/>
     <!-- <GraphCard/> -->
   </div>
 </template>
@@ -10,7 +10,7 @@
 import weightCard from '../components/WeightCard.vue'
 export default {
   name: "resume",
-  components: {weightCard,}
+  components: {weightCard, LineChart}
 };
 </script>
 
@@ -20,5 +20,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   margin-top: -40px;
+  margin-left: 10px;
+  
 }
 </style>co

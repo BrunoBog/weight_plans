@@ -1,29 +1,41 @@
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using weight.Database;
 
 namespace weight.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class WeightController
+    [Route("v1/[controller]")]
+    public class WeightController : Controller
     {
-        private readonly WeightService _service;
+        private readonly WeightRepository _service;
 
-        public WeightController(WeightService weightService)
+        public WeightController(WeightRepository WeightRepository)
         {
-            _service = weightService;
+            _service = WeightRepository;
         }
-        
+
         [HttpPost]
+        [Authorize]
+
         public void SaveWeight(Weight weight)
         {
             _service.Create(weight);
         }
 
         [HttpDelete]
-            public void DeleteWeight(Weight weight)
+        [Authorize]
+        public void DeleteWeight(Weight weight)
         {
             _service.Remove(weight);
         }
+
+
+        [HttpGet]
+        [Authorize]
+        public List<Weight> GetAllFromUser() => User.Identity.Name == null ? _service.Get() : _service.GetFromUser(User.Identity.Name);
+
+
     }
 }
