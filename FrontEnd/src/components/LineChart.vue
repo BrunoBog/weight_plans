@@ -16,8 +16,12 @@ export default {
     data(){
     return {
           series: [{
-            name: 'Likes',
+            name: 'Weight',
             data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5], 
+          },
+          {
+            name: 'Bf',
+            data: [9, 21, 16, 20, 30, 49, 52, 10, 2, 17, 29, 15, 3, 9, 67, 2, 7, 5], 
           }],
           chartOptions: {
             chart: {
@@ -43,7 +47,7 @@ export default {
               type: 'gradient',
               gradient: {
                 shade: 'dark',
-                gradientToColors: [ '#FDD835'],
+                gradientToColors: [ '#FDD835','#545454'],
                 shadeIntensity: 1,
                 type: 'horizontal',
                 opacityFrom: 1,
@@ -62,7 +66,7 @@ export default {
             },
             yaxis: {
               min: -10,
-              max: 40,
+              max: 150,
               title: {
                 text: 'Engagement',
               },

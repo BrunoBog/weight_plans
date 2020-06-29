@@ -72,5 +72,7 @@ export default {
 .but {
   margin-bottom: 7px;
   margin-top: 7px;
+  width: 100px;
+  height: 50px;
 }
 </style>

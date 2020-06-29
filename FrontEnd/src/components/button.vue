@@ -26,7 +26,7 @@ button {
   position: relative;
   outline: none;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +35,12 @@ button {
   height: 60px;
   width: 59px;
   opacity: 1;
-  background-color: #A8DADC;
-  border: 1px solid #A8DADC; 
+  background-color: #1D3557;
+  border: 1px solid #1D3557; 
 }
 
 button span {
-  color: #164ca7;
+  color: #F1FAEE;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.7px;
@@ -101,11 +101,11 @@ button:hover span {
 
 .printicon {
   display: flex;
-  width: 25px;
-  height: 50px;
+  width: 80px;
+  height: 123px;
   align-items: center;
   justify-content: center;
-  color: #1D3557;
+  color: #F1FAEE;
   font-weight: bold;
 }
 </style>
