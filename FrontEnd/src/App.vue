@@ -24,19 +24,21 @@ export default {
   margin: 0;
   padding: 0;
 }
-body{
+body {
   width: 100%;
+  height: 100%;
   max-height: 100%;
-  background-color: #F1FAEE;
+  background-color: #f1faee;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #F1FAEE;
+  background-color: #f1faee;
+  height: 100%;
 }
 .hero {
-  min-height: 50%;
+  min-height: 380px;
 }
 </style>

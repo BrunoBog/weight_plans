@@ -81,6 +81,8 @@ export default {
 .chart{
   margin-left: 30px;
   margin-right: 30px;
+  min-width: 700px;
+  padding: 10px;
   display: flex;
   background-color: #F1FAEE;
   border-radius: 25px;

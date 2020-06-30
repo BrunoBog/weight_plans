@@ -21,6 +21,8 @@ export default {
   justify-content: space-around;
   margin-top: -40px;
   margin-left: 10px;
-  
+}
+.wc{
+  min-height: 50%;
 }
 </style>co
