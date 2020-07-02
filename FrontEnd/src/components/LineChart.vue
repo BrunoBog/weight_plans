@@ -47,7 +47,7 @@ export default {
               type: 'gradient',
               gradient: {
                 shade: 'dark',
-                gradientToColors: [ '#FDD835','#545454'],
+                gradientToColors: [ '#A8DADC2','#E63946'],
                 shadeIntensity: 1,
                 type: 'horizontal',
                 opacityFrom: 1,

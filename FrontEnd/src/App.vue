@@ -1,20 +1,13 @@
 <template>
   <div id="app">
-    <Hero class="hero" />
-    <resume />
+        <router-view/>
   </div>
 </template>
 
 <script>
-import resume from "./pages/Resume.vue";
-import Hero from "./components/Hero.vue";
 
 export default {
   name: "App",
-  components: {
-    resume,
-    Hero
-  }
 };
 </script>
 
@@ -37,8 +30,5 @@ body {
   text-align: center;
   background-color: #f1faee;
   height: 100%;
-}
-.hero {
-  min-height: 380px;
 }
 </style>
