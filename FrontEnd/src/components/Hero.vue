@@ -10,10 +10,10 @@
 <script>
 export default {
   name: "Hero",
-  props: ["actual_size", "actual_bf"],
+  props: ["actual_weight", "actual_bf"],
   data() {
     return {
-      weight: this.actual_size,
+      weight: this.actual_weight,
       bf: this.actual_bf
     };
   }

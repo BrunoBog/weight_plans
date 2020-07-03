@@ -1,13 +1,13 @@
 <template>
   <button v-on:click.stop="callparent">
-    <span class="printicon">SEND</span>
+    <span class="printicon">{{button_label}}</span>
   </button>
 </template>
 
 <script>
 export default {
   name: "Butt",
-  props: ["Label"],
+  props: ["label"],
   methods:{
     callparent(){
       this.$emit('On_click')
@@ -15,7 +15,7 @@ export default {
   },
   data() {
       return {
-        label: this.Label
+        button_label: this.label ?? 'Send'
       }
   }
 };
