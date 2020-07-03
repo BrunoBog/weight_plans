@@ -1,8 +1,8 @@
 <template>
   <div class="boxHero">
     <div class="header"></div>
-    <div class="principal">{{actualSize}} Kg</div>
-    <div class="sub">{{actualSize}}% Bf</div>
+    <div class="principal">{{weight}} Kg</div>
+    <div class="sub">{{bf}}% Bf</div>
     <div class="footer"></div>
   </div>
 </template>
@@ -13,8 +13,8 @@ export default {
   props: ["actual_size", "actual_bf"],
   data() {
     return {
-      actualSize: this.actual_size ?? 0,
-      actualBF: this.actual_bf ?? 0
+      weight: this.actual_size,
+      bf: this.actual_bf
     };
   }
 };

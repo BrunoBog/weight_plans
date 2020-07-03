@@ -101,8 +101,8 @@ button:hover span {
 
 .printicon {
   display: flex;
-  width: 80px;
-  height: 123px;
+  /* width: 80px; */
+  /* height: 123px; */
   align-items: center;
   justify-content: center;
   color: #F1FAEE;

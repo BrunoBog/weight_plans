@@ -3,13 +3,14 @@
     <input type="text" name="weight" placeholder="Actual Wheight" class="first_input" />
     <input type="text" name="bf" placeholder="Actual bf" class="second_input"/>
     <DatePicker calendar-class="calendar" />
-    <Butt class="but" v-on: On_click="On_click" label="Send" />
+    <Butt class="but" v-on: @click.prevent="printDate" label="Send" />
   </div>
 </template>
 
 <script>
 import Butt from "../components/button.vue";
 import DatePicker from "../components/datepicker.vue";
+import {mapActions} from 'vuex'
 export default {
   name: "weightCard",
   components: {
@@ -25,6 +26,7 @@ export default {
     };
   },
   methods: {
+     ...mapActions(['printDate']),
     async On_click() {
       console.log("Clicou Danado");
     }

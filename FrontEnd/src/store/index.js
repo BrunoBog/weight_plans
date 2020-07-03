@@ -7,9 +7,13 @@ export default new Vuex.Store({
   state: {
     status: '',
     token: localStorage.getItem('token') ?? '',
-    user: {}
+    user: {},
+    newDate:  Date,
+    selectDate:  Date
   },
   mutations: {
+    change_date: (state, value) => state.selectDate = value,
+    printDate: (state) => console.log(state.selectDate),
     auth_request(state){
       state.status = 'loading'
     },
@@ -26,56 +30,14 @@ export default new Vuex.Store({
       state.token = ''
     },
   },
+  getters: {
+    selectDate: (state) => state.selectDate,
+  },
   actions: {
-    login({ commit }, user) {
-      return new Promise((resolve, reject) => {
-        commit('auth_request')
-        Vue.prototype.$config.base_url
-        this.$http({ url: this.$config.base_url + 'Login', data: user, method: 'POST' })
-          .then(resp => {
-            const token = resp.data.token
-            const user = resp.data.user
-            localStorage.setItem('token', token)
-            this.$http.defaults.headers.common['Authorization'] = token
-            commit('auth_success', token, user)
-            resolve(resp)
-          })
-          .catch(err => {
-            commit('auth_error')
-            localStorage.removeItem('token')
-            reject(err)
-          })
-      })
+    changeNewDate: ({commit}, value) => {
+      commit('change_date', value)
     },
-
-    // register({ commit }, user) {
-    //   return new Promise((resolve, reject) => {
-    //     commit('auth_request')
-    //     this.$http({ url: this.$config.base_url, data: user, method: 'POST' })
-    //       .then(resp => {
-    //         const token = resp.data.token
-    //         const user = resp.data.user
-    //         localStorage.setItem('token', token)
-    //         this.$http.defaults.headers.common['Authorization'] = token
-    //         commit('auth_success', token, user)
-    //         resolve(resp)
-    //       })
-    //       .catch(err => {
-    //         commit('auth_error', err)
-    //         localStorage.removeItem('token')
-    //         reject(err)
-    //       })
-    //   })
-    // },
-
-    // logout({ commit }) {
-    //   return new Promise((resolve, reject) => {
-    //     commit('logout')
-    //     localStorage.removeItem('token')
-    //     delete this.$http.defaults.headers.common['Authorization']
-    //     resolve()
-    //   })
-    // }
+    printDate: ({commit}) => commit('printDate')
   },
   modules: {
   }

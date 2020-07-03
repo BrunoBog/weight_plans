@@ -8,7 +8,7 @@
 import VueApexCharts from "vue-apexcharts";
 
 export default {
-  props: ["dataSeries", "dataLabels", "period"],
+  props: ["weightDataSeries", "dataLabels", "period", "bDataSerie"],
     name: 'LineChart',
     components: {
         apexchart: VueApexCharts
@@ -17,11 +17,11 @@ export default {
     return {
           series: [{
             name: 'Weight',
-            data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5], 
+            data: [], 
           },
           {
             name: 'Bf',
-            data: [9, 21, 16, 20, 30, 49, 52, 10, 2, 17, 29, 15, 3, 9, 67, 2, 7, 5], 
+            data: [], 
           }],
           chartOptions: {
             chart: {
