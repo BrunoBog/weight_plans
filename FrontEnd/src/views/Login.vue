@@ -31,7 +31,11 @@ export default {
       let Email = this.email;
       let Password = this.password;
       try {
-        let resp = await this.$http({ url: this.$config.base_url + 'v1/User/login', data: {Email, Password}, method: 'POST' })
+        let resp = await this.$http({ 
+          url: this.$config.base_url + 'v1/User/login', 
+          data: {Email, Password}, 
+          method: 'POST' 
+          })
             const token = resp.data.token
             const user = resp.data.user
             localStorage.setItem('token', token)

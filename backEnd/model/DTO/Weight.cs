@@ -1,8 +1,9 @@
 using System;
+using MongoDB.Bson;
 
 public class Weight
 {
-    public string Id { get; set; }
+    public ObjectId Id { get; set; }
     public DateTime Day { get; set; }
     public decimal WeightValue { get; set; }
     public decimal BodyFatValue { get; set; }

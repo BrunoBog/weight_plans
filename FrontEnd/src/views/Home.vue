@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Hero class="hero" actual_weight="100" actual_bf="30" />
+    <Hero class="hero" :actual_weight=lastWeight :actual_bf=lastBf />
     <resume />
   </div>
 </template>
@@ -19,27 +19,17 @@ export default {
     return {
       weightSizes: [],
       BfSizes: [],
-      lastWeight: Number,
-      lastBf: Number
+      lastWeight: 0,
+      lastBf: 0
     };
   },
   methods: {
-    async get_values() {
-      debugger
-      try {
-        let size = await this.$http.get(this.$config.base_url + "v1/weight");
-        console.log(size)
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    async get_last_weight_and_last_bf() {
-
-    }
   },
-  mounted: () => {
+  mounted() {
+  },
+  beforeMount() {
     this.get_values()
-  },
+  }
 };
 </script>
 

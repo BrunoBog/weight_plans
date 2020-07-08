@@ -16,6 +16,26 @@ export default {
       weight: this.actual_weight,
       bf: this.actual_bf
     };
+  },
+  methods:{
+    async get_values() {
+      try {
+        let r = await this.$http({
+          url: this.$config.base_url + "v1/weight/Last",
+          method: 'GET'
+          })
+          this.weight = r.data.weightValue
+          this.bf = r.data.bodyFatValue
+        console.log(`lastWeight: ${this.lastWeight}`)
+        console.log(`lastBf: ${this.lastBf}`)
+        this.$forceUpdate()
+      } catch (error) {
+        console.log(error)
+      }
+    },
+  },
+   beforeMount() {
+    this.get_values()
   }
 };
 </script>

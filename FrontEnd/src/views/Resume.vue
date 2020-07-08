@@ -10,7 +10,8 @@ import weightCard from '../components/WeightCard.vue'
 // import LineChart from '../components/LineChart.vue'
 export default {
   name: "resume",
-  components: {weightCard
+  components: {
+    weightCard
   // ,LineChart
   }
 };
