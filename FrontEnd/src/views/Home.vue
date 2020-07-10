@@ -28,7 +28,6 @@ export default {
   mounted() {
   },
   beforeMount() {
-    this.get_values()
   }
 };
 </script>

@@ -1,9 +1,16 @@
 <template>
   <div class="card">
-    <input type="text" name="weight" placeholder="Actual Wheight" class="first_input" v-bind="weightValue" />
-    <input type="text" name="bf" placeholder="Actual bf" class="second_input" v-bind="bfValue" />
-    <DatePicker calendar-class="calendar" />
-    <Butt class="but" v-on: @click.prevent="printDate" label="Send" />
+    <input
+      type="text"
+      name="weight"
+      placeholder="Actual Wheight"
+      class="first_input"
+      v-model="weightValue"
+    />
+
+    <input type="text" name="bf" placeholder="Actual bf" class="second_input" v-model="bfValue" />
+    <DatePicker />
+    <Butt class="but" label="Send" @On_click="On_click" />
   </div>
 </template>
 
@@ -19,29 +26,37 @@ export default {
   },
   data() {
     return {
-      weightValue: 0,
-      bfValue: 0,
-      data: new Date(2016, 9, 16),
-      checkin: ""
+      weightValue: 0.0,
+      bfValue: 0.0
     };
   },
   methods: {
     ...mapActions(["printDate"]),
     ...mapGetters(["selectDate"]),
-    async On_click() {
-      console.log("Clicou Danado");
+    On_click() {
+      this.postWeight()
     },
     async postWeight() {
-      
-      var payload = {
+      let payload = {
         Day: this.selectDate(),
-        WeightValue: this.weightValue,
+        WeightValue: parseFloat(this.weightValue),
+        BodyFatValue: parseFloat(this.bfValue),
         Description: null,
-        bodyFatValue: this.bfValue,
         UserMail: "bog906@gmail.com"
       };
+      try {
+        await this.$http({
+          url: this.$config.base_url + "v1/weight",
+          data: payload,
+          method: "POST"
+        });
+        this.weightValue = ''
+        this.bfValue = ''
 
-      console.log(payload);
+      } catch (error) {
+        console.error(error);
+      }
+
     }
   }
 };
