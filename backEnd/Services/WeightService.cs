@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace weight.Database
@@ -19,25 +20,16 @@ namespace weight.Database
         public List<Weight> Get() =>
             Weights.Find(WeightDTO => true).ToList();
 
-        public Weight Get(string id) =>
+        public Weight Get(ObjectId id) =>
             Weights.Find<Weight>(WeightDTO => WeightDTO.Id == id).FirstOrDefault();
 
-        public Weight Create(Weight WeightDTO)
-        {
-            if (WeightDTO.Id == null)
-                WeightDTO.Id = Guid.NewGuid().ToString();
-                
-            Weights.InsertOne(WeightDTO);
-            return WeightDTO;
-        }
-
-        public void Update(string id, Weight WeightDTOIn) =>
+        public void Update(ObjectId id, Weight WeightDTOIn) =>
             Weights.ReplaceOne(WeightDTO => WeightDTO.Id == id, WeightDTOIn);
 
         public void Remove(Weight WeightDTOIn) =>
             Weights.DeleteOne(WeightDTO => WeightDTO.Id == WeightDTOIn.Id);
 
-        public void Remove(string id) => 
+        public void Remove(ObjectId id) => 
             Weights.DeleteOne(WeightDTO => WeightDTO.Id == id);
     }
 }

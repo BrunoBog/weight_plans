@@ -2,15 +2,18 @@
   <div class="content">
    <weightCard/>
    <LineChart/>
-    <!-- <GraphCard/> -->
   </div>
 </template>
 
 <script>
 import weightCard from '../components/WeightCard.vue'
+import LineChart from '../components/LineChart.vue'
 export default {
   name: "resume",
-  components: {weightCard, LineChart}
+  components: {
+    weightCard
+  ,LineChart
+  }
 };
 </script>
 
@@ -21,6 +24,8 @@ export default {
   justify-content: space-around;
   margin-top: -40px;
   margin-left: 10px;
-  
+}
+.wc{
+  min-height: 50%;
 }
 </style>co

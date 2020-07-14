@@ -54,3 +54,6 @@ ipch/
 *.bak.*
 *.bak
 appsettings*.json
+
+#FrontEnd
+Config.js

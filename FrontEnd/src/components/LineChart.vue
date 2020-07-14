@@ -8,74 +8,111 @@
 import VueApexCharts from "vue-apexcharts";
 
 export default {
-  props: ["dataSeries", "dataLabels", "period"],
-    name: 'LineChart',
-    components: {
-        apexchart: VueApexCharts
-    },
-    data(){
+  props: ["weightDataSeries", "dataLabels", "period", "bDataSerie"],
+  name: "LineChart",
+  components: {
+    apexchart: VueApexCharts
+  },
+  data() {
     return {
-          series: [{
-            name: 'Likes',
-            data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
-          }],
-          chartOptions: {
-            chart: {
-              type: 'line',
-            },
-            stroke: {
-              width: 7,
-              curve: 'smooth'
-            },
-            xaxis: {
-              type: 'datetime',
-              categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001','4/11/2001' ,'5/11/2001' ,'6/11/2001'],
-            },
-            title: {
-              text: 'Social Media',
-              align: 'left',
-              style: {
-                fontSize: "16px",
-                color: '#666'
-              }
-            },
-            fill: {
-              type: 'gradient',
-              gradient: {
-                shade: 'dark',
-                gradientToColors: [ '#FDD835'],
-                shadeIntensity: 1,
-                type: 'horizontal',
-                opacityFrom: 1,
-                opacityTo: 1,
-                stops: [0, 100, 100, 100]
-              },
-            },
-            markers: {
-              size: 4,
-              colors: ["#FFA41B"],
-              strokeColors: "#fff",
-              strokeWidth: 2,
-              hover: {
-                size: 7,
-              }
-            },
-            yaxis: {
-              min: -10,
-              max: 40,
-              title: {
-                text: 'Engagement',
-              },
-            }
-          },
+      wightvalues: [],
+      bfvalues: [] ,
+      data_series: [],
+      series: [
+        {
+          name: "Weight",
+          data: this.wightvalues
+        },
+        {
+          name: "Bf",
+          data: this.bfvalues
         }
-    },
-}
+      ],
+      chartOptions: {
+        chart: {
+          type: "line"
+        },
+        stroke: {
+          width: 7,
+          curve: "smooth"
+        },
+        xaxis: {
+          type: "datetime",
+          categories: this.data_series
+        },
+        title: {
+          text: "Social Media",
+          align: "left",
+          style: {
+            fontSize: "16px",
+            color: "#666"
+          }
+        },
+        fill: {
+          type: "gradient",
+          gradient: {
+            shade: "dark",
+            gradientToColors: ["#A8DADC2", "#E63946"],
+            shadeIntensity: 1,
+            type: "horizontal",
+            opacityFrom: 1,
+            opacityTo: 1,
+            stops: [0, 100, 100, 100]
+          }
+        },
+        markers: {
+          size: 4,
+          colors: ["#FFA41B"],
+          strokeColors: "#fff",
+          strokeWidth: 2,
+          hover: {
+            size: 7
+          }
+        },
+        yaxis: {
+          min: -10,
+          max: 150,
+          title: {
+            text: "Engagement"
+          }
+        }
+      }
+    };
+  },
+  beforeMount() {
+      this.get_values()
+  },
+  methods:{
+    async get_values(){
+    try {  
+      let resp = await this.$http({ 
+          url: this.$config.base_url + 'v1/weight', 
+          method: 'GET' 
+          })
+      let bfs = resp.data.map( i => i.bodyFatValue)
+      let weights = resp.data.map( i => i.weightValue)
+      let dates = resp.data.map( i => i.day)
+
+      this.data_series = dates,
+      this.wightvalues = weights
+      this.bfvalues = bfs
+      //TODO refresh Hero
+    } catch (error) {
+      console.log(error)
+    }
+    }
+  }
+};
 </script>
 
 <style scoped>
-.chart{
+.chart {
   margin-left: 30px;
   margin-right: 30px;
+  min-width: 700px;
+  padding: 10px;
+  display: flex;
+  background-color: #f1faee;
+  border-radius: 25px;
 }
 </style>
