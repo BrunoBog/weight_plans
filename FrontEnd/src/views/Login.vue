@@ -12,7 +12,7 @@
         <input type="password" placeholder="Password" v-model="password" />
       </div>
 
-      <input type="button" class="btn" value="Sign in" @click.once="login"/>
+      <input type="button" class="btn" value="Sign in" @click.once="login" />
     </div>
   </div>
 </template>
@@ -31,17 +31,17 @@ export default {
       let Email = this.email;
       let Password = this.password;
       try {
-        let resp = await this.$http({ 
-          url: this.$config.base_url + 'v1/User/login', 
-          data: {Email, Password}, 
-          method: 'POST' 
-          })
-            const token = resp.data.token
-            const user = resp.data.user
-            localStorage.setItem('token', token)
-            localStorage.setItem('user', user)
-            this.$http.defaults.headers.common['Authorization'] = token
-            this.$router.push("Home");
+        let resp = await this.$http({
+          url: this.$config.base_url + "v1/User/login",
+          data: { Email, Password },
+          method: "POST"
+        });
+        const token = resp.data.token;
+        const user = resp.data.user;
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", user);
+        this.$http.defaults.headers.common["Authorization"] = token;
+        this.$router.push("Home");
       } catch (e) {
         console.log(e);
       }
@@ -53,22 +53,24 @@ export default {
 <style>
 .box {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4d63ac64120315.5ac773360206a.png)
+    no-repeat;
+  background-size: cover;
+
 }
 .login-box {
+  
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* background: url(https://hdqwalls.com/wallpapers/green-blue-violet-gradient-8k-xv.jpg) no-repeat;
-  background-size: cover; */
   width: 280px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #457b9d;
 }
 .login-box h1 {
-  float: left;
+  /* float: left; */
   font-size: 40px;
   border-bottom: 6px solid #e63946;
   margin-bottom: 50px;

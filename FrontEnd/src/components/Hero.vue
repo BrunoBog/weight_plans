@@ -13,6 +13,7 @@ export default {
   props: ["actual_weight", "actual_bf"],
   data() {
     return {
+      //TODO colocar esses caras no state para trocar quando enviar um novo peso
       weight: this.actual_weight,
       bf: this.actual_bf
     };
@@ -45,22 +46,16 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;gg
   min-height: 350px;
   color: #e96544;
-  /* background-image: image('../img/intro.jpg'); */
   background-image: linear-gradient(to right, #1d3557, #457b9d, #e63946);
 }
-.boxHero div {
-  width: 100%;
-  height: 100%;
-}
+
 .principal{
     font-size: 99px;
 }
 .sub {
   font-size: 30px;
-  width: 50%;
-  height: 50%;
 }
 </style>

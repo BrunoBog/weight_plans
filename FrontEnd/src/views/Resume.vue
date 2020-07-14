@@ -1,18 +1,18 @@
 <template>
   <div class="content">
    <weightCard/>
-   <!-- <LineChart/> -->
+   <LineChart/>
   </div>
 </template>
 
 <script>
 import weightCard from '../components/WeightCard.vue'
-// import LineChart from '../components/LineChart.vue'
+import LineChart from '../components/LineChart.vue'
 export default {
   name: "resume",
   components: {
     weightCard
-  // ,LineChart
+  ,LineChart
   }
 };
 </script>

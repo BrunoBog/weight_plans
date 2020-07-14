@@ -1,5 +1,5 @@
 const Config = {
-    base_url: "https://localhost:5001/"
+    base_url: "https://weight.josafat.duckdns.org/"
 }
 
 export default Config;
