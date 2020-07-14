@@ -46,7 +46,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;gg
+  justify-content: center;
   min-height: 350px;
   color: #e96544;
   background-image: linear-gradient(to right, #1d3557, #457b9d, #e63946);

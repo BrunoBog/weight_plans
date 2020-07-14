@@ -1,5 +1,5 @@
 const Config = {
-    base_url: "https://weight.josafat.duckdns.org/"
+    base_url: "http://weight.josafat.duckdns.org/"
 }
 
 export default Config;
