@@ -11,7 +11,6 @@
         <i class="fas fa-lock"></i>
         <input type="password" placeholder="Password" v-model="password" />
       </div>
-
       <input type="button" class="btn" value="Sign in" @click.once="login" />
     </div>
   </div>

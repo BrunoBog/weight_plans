@@ -32,6 +32,7 @@ export default new Vuex.Store({
   },
   getters: {
     selectDate: (state) => state.selectDate,
+    token: (state) => state.token,
   },
   actions: {
     changeNewDate: ({commit}, value) => {

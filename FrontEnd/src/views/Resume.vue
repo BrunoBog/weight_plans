@@ -8,6 +8,7 @@
 <script>
 import weightCard from '../components/WeightCard.vue'
 import LineChart from '../components/LineChart.vue'
+
 export default {
   name: "resume",
   components: {
@@ -28,4 +29,4 @@ export default {
 .wc{
   min-height: 50%;
 }
-</style>co
+</style>
