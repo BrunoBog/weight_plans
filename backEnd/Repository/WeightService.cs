@@ -23,7 +23,7 @@ namespace weight.Database
             Weights.Find(WeightDTO => true).SortByDescending(w => w.Day).ToList();
 
         public List<Weight> GetFromUser(string email) => 
-        Weights.Find(WeightDTO => WeightDTO.UserMail.Equals(email)).SortByDescending(w => w.Day).ToList();
+        Weights.Find(WeightDTO => WeightDTO.UserMail.Equals(email)).SortBy(w => w.Day).ToList();
 
         public Weight Get(ObjectId id) =>
             Weights.Find<Weight>(WeightDTO => WeightDTO.Id == id).FirstOrDefault();

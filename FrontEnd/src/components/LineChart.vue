@@ -8,21 +8,20 @@
 import VueApexCharts from "vue-apexcharts";
 
 export default {
-  props: ["weightDataSeries", "dataLabels", "period", "bDataSerie"],
   name: "LineChart",
   components: {
     apexchart: VueApexCharts,
   },
   data() {
     return {
-      labels: [],
+      labels: [new Date()],
       options: {
         chart: {
           id: "vuechart-example",
         },
         xaxis: {
           // type: 'datetime',
-          categories: this.labels,
+          // categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001','4/11/2001' ,'5/11/2001' ,'6/11/2001'],
         },
         stroke: {
           width: 7,
@@ -68,7 +67,19 @@ export default {
         let weights = resp.data.map((i) => i.weightValue);
         let dates = resp.data.map((i) => i.day);
 
-        this.labels = dates;
+        // this.labels = dates;
+        // this.xaxis.categories = resp.data.map((i) => i.day.toString())
+        // {
+        //   type: 'datetime',
+        //   categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001','4/11/2001' ,'5/11/2001' ,'6/11/2001'],
+        // }
+
+        // {
+        //   type: 'datetime',
+        //   categories: dates,
+        // }
+        
+
         this.updateTheme(dates);
         this.series = [
           {
