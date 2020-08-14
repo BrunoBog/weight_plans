@@ -1,15 +1,23 @@
 <template>
   <div class="card">
-    <input type="text" name="weight" placeholder="Actual Wheight" class="first_input" />
-    <input type="text" name="bf" placeholder="Actual bf" class="second_input"/>
-    <DatePicker calendar-class="calendar" />
-    <Butt class="but" v-on: On_click="On_click" label="Send" />
+    <input
+      type="text"
+      name="weight"
+      placeholder="Actual Wheight"
+      class="first_input"
+      v-model="weightValue"
+    />
+
+    <input type="text" name="bf" placeholder="Actual bf" class="second_input" v-model="bfValue" />
+    <DatePicker />
+    <Butt class="but" label="Send" @On_click="On_click" />
   </div>
 </template>
 
 <script>
 import Butt from "../components/button.vue";
 import DatePicker from "../components/datepicker.vue";
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "weightCard",
   components: {
@@ -18,15 +26,37 @@ export default {
   },
   data() {
     return {
-      weightValue: 0,
-      bfValue: 0,
-      data: new Date(2016, 9, 16),
-      checkin: '',
+      weightValue: null,
+      bfValue: null
     };
   },
   methods: {
-    async On_click() {
-      console.log("Clicou Danado");
+    ...mapActions(["printDate"]),
+    ...mapGetters(["selectDate"]),
+    On_click() {
+      this.postWeight()
+    },
+    async postWeight() {
+      let payload = {
+        Day: this.selectDate(),
+        WeightValue: parseFloat(this.weightValue),
+        BodyFatValue: parseFloat(this.bfValue),
+        Description: null,
+        UserMail: "bog906@gmail.com"
+      };
+      try {
+        await this.$http({
+          url: this.$config.base_url + "v1/weight",
+          data: payload,
+          method: "POST"
+        });
+        this.weightValue = ''
+        this.bfValue = ''
+
+      } catch (error) {
+        console.error(error);
+      }
+
     }
   }
 };
@@ -39,10 +69,11 @@ export default {
   justify-content: space-around;
   align-items: center;
   background-color: #f1faee;
-  max-width: 350px;
-  max-height: 200px;
+  width: 350px;
+  height: 200px;
   border: none;
   border-radius: 25px;
+  padding: 10px;
 }
 .card input {
   text-align: center;
@@ -59,17 +90,19 @@ export default {
 .first_input {
   max-width: 200px;
 }
-.second_input{
+.second_input {
   max-width: 150px;
 }
 .picker {
-    margin: 5px;
-    max-width: 100px;
-    max-height: 25px;
-    text-align: center;
+  margin: 5px;
+  max-width: 100px;
+  max-height: 25px;
+  text-align: center;
 }
 .but {
   margin-bottom: 7px;
   margin-top: 7px;
+  width: 100px;
+  height: 50px;
 }
 </style>

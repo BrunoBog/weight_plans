@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "w/vPHBgolQYUtD5grdivQm2STAV6jyiyZlPI5pedxEM+X2v9uQDeqDGWeDXGKntHtKiKWpQJwAE0KQJb8/Ghgg==",
+=======
+  "dgSpecHash": "RsWclBGBsBztQ9IMkY2Sdd7/doQE4r3w/8WO3eIZ7wYDB8ZVwN/NQkvq7JNLZZBMr6ptY2HEjTNqMoFgynDtyw==",
+>>>>>>> 33e2c5ffed6147795c8ee6b3a0416b3ea9a3f58c
   "success": true,
   "projectFilePath": "e:\\workspace\\vue\\weight_plans\\backEnd\\weight.csproj",
   "expectedPackageFiles": [
@@ -45,6 +49,26 @@
     "C:\\Users\\bruno.josafat\\.nuget\\packages\\mongodb.libmongocrypt\\1.0.0\\mongodb.libmongocrypt.1.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+<<<<<<< HEAD
+=======
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.diagnostics.tools\\4.3.0\\runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.diagnostics.tracing\\4.3.0\\runtime.any.system.diagnostics.tracing.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.globalization\\4.3.0\\runtime.any.system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.globalization.calendars\\4.3.0\\runtime.any.system.globalization.calendars.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.io\\4.3.0\\runtime.any.system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.reflection\\4.3.0\\runtime.any.system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.reflection.extensions\\4.3.0\\runtime.any.system.reflection.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.reflection.primitives\\4.3.0\\runtime.any.system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.resources.resourcemanager\\4.3.0\\runtime.any.system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.runtime\\4.3.0\\runtime.any.system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.runtime.handles\\4.3.0\\runtime.any.system.runtime.handles.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.runtime.interopservices\\4.3.0\\runtime.any.system.runtime.interopservices.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.text.encoding\\4.3.0\\runtime.any.system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.text.encoding.extensions\\4.3.0\\runtime.any.system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.threading.tasks\\4.3.0\\runtime.any.system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.any.system.threading.timer\\4.3.0\\runtime.any.system.threading.timer.4.3.0.nupkg.sha512",
+>>>>>>> 33e2c5ffed6147795c8ee6b3a0416b3ea9a3f58c
     "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\bruno.josafat\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
@@ -146,7 +170,14 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\bruno.josafat\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+=======
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\5.0.0-preview.5.20278.1\\microsoft.netcore.app.runtime.linux-x64.5.0.0-preview.5.20278.1.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\5.0.0-preview.5.20278.1\\microsoft.netcore.app.host.linux-x64.5.0.0-preview.5.20278.1.nupkg.sha512",
+    "C:\\Users\\bruno.josafat\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\5.0.0-preview.5.20279.2\\microsoft.aspnetcore.app.runtime.linux-x64.5.0.0-preview.5.20279.2.nupkg.sha512"
+>>>>>>> 33e2c5ffed6147795c8ee6b3a0416b3ea9a3f58c
   ],
   "logs": []
 }

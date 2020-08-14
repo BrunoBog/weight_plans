@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using weight.Database;
@@ -34,7 +35,12 @@ namespace weight.Controllers
 
         [HttpGet]
         [Authorize]
-        public List<Weight> GetAllFromUser() => User.Identity.Name == null ? _service.Get() : _service.GetFromUser(User.Identity.Name);
+        public List<Weight> GetAllFromUser() => _service.GetFromUser(User.Identity.Name);
+
+        [HttpGet]
+        [Route("Last")]
+        [Authorize]
+        public async Task<Weight> GetLastWeightAsync() => await _service.GetLastWeightAsync(User.Identity.Name);
 
 
     }
