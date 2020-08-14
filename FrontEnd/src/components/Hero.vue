@@ -27,9 +27,7 @@ export default {
           })
           this.weight = r.data.weightValue
           this.bf = r.data.bodyFatValue
-        console.log(`lastWeight: ${this.lastWeight}`)
-        console.log(`lastBf: ${this.lastBf}`)
-        this.$forceUpdate()
+        // this.$forceUpdate()
       } catch (error) {
         console.log(error)
       }

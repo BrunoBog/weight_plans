@@ -26,8 +26,8 @@ export default {
   },
   data() {
     return {
-      weightValue: 0.0,
-      bfValue: 0.0
+      weightValue: null,
+      bfValue: null
     };
   },
   methods: {

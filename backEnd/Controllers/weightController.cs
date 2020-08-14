@@ -35,7 +35,7 @@ namespace weight.Controllers
 
         [HttpGet]
         [Authorize]
-        public List<Weight> GetAllFromUser() => User.Identity.Name == null ? _service.Get() : _service.GetFromUser(User.Identity.Name);
+        public List<Weight> GetAllFromUser() => _service.GetFromUser(User.Identity.Name);
 
         [HttpGet]
         [Route("Last")]
