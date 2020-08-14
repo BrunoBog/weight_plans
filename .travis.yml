@@ -4,7 +4,8 @@ node_js:
 
 cache: npm
 
-script: npm build .\FrontEnd\
+before_script: cd FrontEnd
+script: npm run build
 
 deploy:
  provider: pages
